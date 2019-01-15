@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+ -*- coding: utf-8 -*-
+ Odoo, Open Source  Itm Material Theme .
+ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).  
+-->
+<odoo>
+    <record id="res_users_preferences" model="ir.ui.view">
+        <field name="name">res.users.preferences</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook//page//group//group[@groups='base.group_no_one']" position="replace">
+				<group string="Menus Customization" >
+					<field name="action_id"/>
+					<field name="sidebar_visible" readonly="0"/>
+				</group>
+			</xpath>
+        </field>
+    </record>
+</odoo>

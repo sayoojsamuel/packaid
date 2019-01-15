@@ -1,0 +1,824 @@
+/**
+ *  -*- coding: utf-8 -*-
+ *  Odoo, Open Source  Itm Material Theme.
+ *  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).# 
+ * 
+ */
+ 
+
+@dynamic_color_default: #7a86ff; // main 
+@dynamic_color_hover: #ecf1f5; // dark
+@dynamic_color: #C9DFF5;   // lighten 
+@dynamic_color_border: #C9DFF5;  // border color could be different in other theme
+@dynamic_color_tag_bg: #ecf1f5; // more light
+
+/*@dynamic_color_light: @dynamic_color_default;
+@dynamic_color_lightcolor: lighten(@dynamic_color_light, 9%);*/
+
+
+// .fix_icon_width {
+//     width: 80px !important;
+// }
+
+
+body a{color: @dynamic_color_default}
+
+// TOP Navbar 
+
+
+// backend theme added color
+.navbar-default { 
+    -webkit-box-shadow: 0 5px 10px 2px fade(@dynamic_color_default, 36%);
+    -moz-box-shadow: 0 5px 10px 2px fade(@dynamic_color_default, 36%);
+    box-shadow: 0 5px 10px 2px fade(@dynamic_color_default, 36%); 
+}
+
+#backend-customizer label > div.theme {
+    background: @dynamic_color_default;
+}
+
+.btn-primary {  color: #ffffff; background-color: @dynamic_color_default;}
+.btn-link{color: @dynamic_color_default}
+
+.navbar.navbar-default.main-nav{
+    background-color: @dynamic_color_default;
+}
+
+.navbar-default.main-nav.dark-nav {
+      background-color:#2c2e3e;
+    -webkit-box-shadow: 0 5px 10px 2px fade(#2c2e3e, 36%);
+    -moz-box-shadow: 0 5px 10px 2px fade(#2c2e3e, 36%);
+    box-shadow: 0 5px 10px 2px fade(#2c2e3e, 36%);
+}
+.navbar-default.main-nav.light-nav {
+    background-color: #fff;
+        -webkit-box-shadow: 0 1px 15px 1px rgba(69,65,78,.1);
+    -moz-box-shadow: 0 1px 15px 1px rgba(69,65,78,.1);
+    box-shadow: 0 1px 15px 1px rgba(69,65,78,.1);
+}
+
+.body-dark-bg .navbar-default.main-nav{
+     -webkit-box-shadow: inherit;
+    -moz-box-shadow: inherit;
+    box-shadow:inherit;
+
+}
+
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: @dynamic_color_tag_bg;
+}
+
+.app-sidebar .app-sidebar-menu > li:hover > a {
+    background:  @dynamic_color_hover ;
+    color: #fff;
+}
+
+.app-sidebar .app-sidebar-menu >  li.active > a {
+    color: #fff;
+    background-color: @dynamic_color_hover;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    background-color: @dynamic_color_tag_bg;
+}
+
+
+header > .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu ul.dropdown-menu > li.dropdown-header {
+    color: white;
+    text-decoration: none;
+    background-color: @dynamic_color_hover;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: @dynamic_color_default;
+    color: #fff;
+}
+
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus,.navbar-nav .open .dropdown-menu > li.active > a, .navbar-nav .open > a {
+    color: #fff;
+    background-color: @dynamic_color_hover;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: @dynamic_color_hover;
+}
+
+.navbar-default .navbar-nav > .active > a {
+    color: #fff;
+    background-color: @dynamic_color_hover;
+}
+
+.oe_highlight {
+    color: #ffffff ;
+    background-color: @dynamic_color_default;
+}
+
+.o_main .o_main_content .o_form_view ul.oe_form_status_clickable li {
+       border: 0px solid #fff ;
+}
+
+.o_main .o_main_content .o_form_view ul.oe_form_status li:last-child{
+	border: 0px solid #fff ;
+}
+
+.o_main .o_main_content .o_form_view ul.oe_form_status_clickable li:last-child {
+    border: 0px solid #fff ;
+}
+
+.o_main .o_main_content .o_form_view ul.oe_form_status li > .arrow, .o_main .o_main_content .o_form_view ul.oe_form_status_clickable li > .arrow {
+     background-color: #fff ;
+}
+
+.o_form_view .o_horizontal_separator{
+    color: @dynamic_color_default;
+}
+
+/*.o_required_modifier.o_input, .o_required_modifier .o_input{
+        background-color: @dynamic_color_lightcolor !important;
+}*/
+
+
+// end of backend extra color
+#oe_main_menu_navbar {
+    background-color: #FFF;
+    border: none;
+    font-family: "Open Sans Light";
+    a.o_sub_menu_logo{
+        margin-right: 25px;
+        float: left;
+        &:hover {
+            .o_sub_menu_logo_edit_admin {
+                display: block;
+            }
+        }
+        img {
+            height: 45px;
+            max-width: 180px;
+        }
+        .o_sub_menu_logo_edit {
+            @media (max-width: 768px) {
+                display: none
+            }
+            font-size: 13px;
+            color: #FFF;
+            padding: 18px 8px 18px 8px;
+            font-weight: 300;
+            position: absolute;
+            display: none;
+            text-align: center;
+            background: rgba(104, 104, 104, 0.9);
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -ms-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    }
+    ul.user_top_header_menu {
+        float: left;
+        > li.header_menu_item {
+            display: inline-block;
+        }
+    }
+    .navbar-nav > li > a {
+        color: #888888;
+        font-weight: 300;
+        font-size: 15px;
+        line-height: 45px;
+        margin-top: 0px;
+        @media (max-width: 767px) {
+            line-height: 25px;
+        }
+        &:hover,
+        &:focus {
+            color: @dynamic_color_default;
+            background: none;
+        }
+    }
+    .navbar-nav > .active > a {
+        &,
+        &:hover,
+        &:focus {
+            color: @dynamic_color;
+            background-color: @dynamic_color_hover;
+        }
+    }
+    .navbar-nav > .open > a {
+        &,
+        &:hover,
+        &:focus {
+            color: @dynamic_color;
+            background-color: @dynamic_color_hover;
+        }
+    }
+    .navbar-toggle {
+        background-color: @dynamic_color_default;
+        &:hover,
+        &:focus {
+            background-color: @dynamic_color_hover;
+        }
+        .icon-bar {
+            background-color: #FFF;
+        }
+     }
+    .oe_topbar_avatar {
+        height: 40px;
+        width: 40px;
+        max-height: 50px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+    }
+    .o_planner_systray>.progress{
+        margin-top: 20px;
+    }
+    .o_selected {
+        color: @dynamic_color_default;
+    }
+    .o_new_message {
+        color: @dynamic_color_default;
+    }
+    .odoo_clock {
+        float: left;
+        line-height: 53px;
+        margin-left: 20%;  // it sucks
+        color: #888888;
+        @media (max-width: 768px) {
+            display: none
+        }
+    }
+}
+
+//Chat Window
+.o_chat_window {
+    height: 340px;
+    border-radius: 0px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    .o_chat_header {
+        background-color: @dynamic_color_default;
+        padding: 8px;
+    }
+    .o_chat_input > input {
+        width: 96%;
+        margin-bottom: 4px;
+    }
+}
+
+.o_loading {
+    bottom: 0;
+    right: 10%;
+    top: inherit;
+    padding: 5px 30px;
+    text-align: center;
+    background: @dynamic_color_default;
+    border: 1px solid @dynamic_color_default;
+    border-radius: 0px !important;
+}
+
+.o_main {
+
+    .o_sub_menu {
+
+        &.fix_icon_width {
+            flex: 0 0 80px;
+        }
+        display: flex; 
+        width: 230px;
+        background-color: @dynamic_color_default; 
+        text-shadow: none;
+        .o_sub_menu_content {
+            overflow-x: hidden;
+            overflow-y: auto;
+            .cssmenu {
+                border-bottom: 1px solid rgba(252, 252, 252, 0.18);
+                &:hover{
+                    background-color: @dynamic_color_hover;
+                    .iconic_menu.oe_secondary_menu {
+                        display: block !important;
+                        margin-top: -88px !important;
+                        overflow: auto !important;
+                        width: 230px;
+                        position: fixed;
+                        z-index: 2000;
+                        left: 98px;
+                        -webkit-border-radius: 0px;
+                        -moz-border-radius: 0px;
+                        -ms-border-radius: 0px;
+                        -o-border-radius: 0px;
+                        border-radius: 0px;
+                        background-color: #FFF;
+                        max-height: 280px;
+                        .side_menu_heading{
+                            display: block;
+                        }
+                    }
+                }
+                .menu_heading { 
+                    color: @dynamic_color;
+                    padding: 12px 10px 12px 15px;
+                    margin: 0px;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 1.17em;
+                    cursor: pointer;
+                    font-weight: normal !important;
+                    a {
+                        color: @dynamic_color;
+                        i {
+                            padding-right: 10px;
+                        }
+                    }
+                    i {
+                        padding-right: 10px;
+                    }
+                    &.iconic_menu_heading {
+                        padding: 12px 0px 12px 0px;
+                        text-align: center;
+                        font-size: 1em;
+                        .menu_title {
+                            display: block;
+                            padding-top: 5px;
+                            padding-right: 10px;
+                        }
+                        i {
+                            font-size: 1.2em;
+                        }
+                    }
+                }
+                .oe_secondary_menu{
+                    .side_menu_heading{
+                        background-color: @dynamic_color_hover;
+                        color: #FFF;
+                        padding: 12px 13px 12px 13px;
+                        margin: 0px;
+                        font-weight: normal !important;
+                        text-align: left;
+                        display: none;
+                        font-family: "Open Sans", sans-serif;
+                    }
+                    .oe_secondary_menu_section{
+                        font-weight: 300;
+                        background-color: @dynamic_color_hover;
+                        color: @dynamic_color; /*#1a1a1a;*/
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        padding: 10px 10px 5px 5px;
+                        font-family: "Open Sans", sans-serif;
+                        text-align: center;
+                        margin-left: 0px;
+                        &:first-child{
+                            border-top: none;
+                        }
+                        > img {
+                            width: 20px;
+                            height: 20px;
+                            margin-left: 5px;
+                        }
+                        .oe_menu_leaf{
+                            color: @dynamic_color;
+                            font-weight: normal;
+                        }
+                    }
+                    ul.oe_secondary_submenu {
+                        background-color: @dynamic_color_hover;
+                        margin: 0 !important;
+                        line-height: 1.3em;
+                        padding: 0;
+                        border-bottom: 1px solid @dynamic_color_default;
+                        li {
+                            a {
+                            padding: 9px 15px 9px 14px;
+                            color: @dynamic_color;
+                            font-size: 13.5px;
+                            font-family: "Open Sans", sans-serif;
+                            &:hover{
+                                background-color: @dynamic_color_default;
+                                border-radius: 0px;
+                            }
+                            &:focus{
+                                background-color: @dynamic_color_hover;
+                                outline: none;
+                            }
+                            }
+                            .oe_menu_toggler{
+                                &:before {
+                                    float: left;
+                                    width: 10px;
+                                    margin-right: 5px;
+                                    margin-left: 5px;
+                                    margin-top: 0px;
+                                    display: inline;
+                                    font-size: 16px;
+                                    font-family: FontAwesome;
+                                    height: auto;
+                                    content: "\f105";
+                                    font-weight: 300;
+                                    text-shadow: none;
+                                    text-align: left;
+                                    border: 0px;
+                                    text-indent: 1px;
+                                    opacity: 1;
+                                }
+                                &.active {
+                                    &:before {
+                                        content: "\f107";
+                                    }
+                                }
+                            }
+                        }
+                        li.active {
+                            a {
+                                background-color: @dynamic_color_default;
+                            }
+                        }
+                        .oe_menu_text {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            display: inline-block;
+                            text-overflow: ellipsis;
+                            max-width: 83%;
+                            margin-top: 1px;
+                        }
+                    }
+                }
+            }
+        }
+        .o_sub_menu_footer {
+            background: @dynamic_color_default;
+            color: @dynamic_color;
+            a span {
+                color: @dynamic_color;
+                font-style: italic;
+                font-weight: normal;
+            }
+        }
+    }
+
+    // Search View
+    .o_searchview {
+        padding-left: 1px;
+        .o_searchview_input {
+            height: 1rem;
+            margin: 0px;
+        }
+        .o_searchview_search {
+            background: @dynamic_color_default;
+        }
+        .o_searchview_facet{
+            border: none;
+            background: @dynamic_color_tag_bg;
+            margin: 1px 3px 3px 3px;
+            .o_facet_remove{
+                color: @dynamic_color_default;
+                width: 12px;
+                height: 13px;
+                margin: 3px;
+                &:hover{
+                    background:@dynamic_color;
+                }
+            }
+            .o_searchview_facet_label {
+                color: @dynamic_color_default;
+                background-color: @dynamic_color_tag_bg;
+            }
+            .o_facet_values{
+                color: @dynamic_color_default;
+                background: @dynamic_color_tag_bg;
+                .o_facet_value {
+                    color: @dynamic_color_default;
+                }
+            }
+        }
+        .o_searchview_unfold_drawer {
+            color: @dynamic_color_default;
+        }
+        .o_searchview_autocomplete {
+            border: 1px solid @dynamic_color_default;
+
+            li.o-selection-focus { 
+                background-color: @dynamic_color_default;
+            }
+        }
+    }
+
+    /* .oe_horizontal_separator {
+        font-size: 14px;
+        border-bottom: 1px solid @dynamic_color_default;
+        color: @dynamic_color_default;
+        font-weight: normal;
+    } */
+
+    // Form element having disabled class
+    .btn-default.disabled, .btn-default[disabled], fieldset[disabled] .btn-default, .btn-default.disabled:hover, .btn-default[disabled]:hover, fieldset[disabled] .btn-default:hover, .btn-default.disabled:focus, .btn-default[disabled]:focus, fieldset[disabled] .btn-default:focus, .btn-default.disabled.focus, .btn-default[disabled].focus, fieldset[disabled] .btn-default.focus, .btn-default.disabled:active, .btn-default[disabled]:active, fieldset[disabled] .btn-default:active, .btn-default.disabled.active, .btn-default[disabled].active, fieldset[disabled] .btn-default.active {
+        background-color: @dynamic_color_default;
+    }
+
+    // List View
+    .oe_list_content > tbody > tr:nth-child(odd) {
+        background-color: #FCFCFC !important;
+        background-image: none !important;
+    }
+
+    .o_list_view tfoot {  background-color: @dynamic_color_default;}
+
+    // Input Radio and Checkbox
+    input[type="radio"]:before,
+    .radio input[type="radio"]:before,
+    .radio-inline input[type="radio"]:before {
+        background-color: @dynamic_color_default;
+    }
+    input[type="radio"]:checked:after,
+    .radio input[type="radio"]:checked:after,
+    .radio-inline input[type="radio"]:checked:after {
+        border-color: @dynamic_color_default;
+    }
+    input[type="checkbox"]:checked:after,
+    .checkbox input[type="checkbox"]:checked:after,
+    .checkbox-inline input[type="checkbox"]:checked:after {
+        background-color: @dynamic_color_default;
+        border-color: @dynamic_color_default;
+    }
+}
+
+// OE State Button
+.oe_button_box {
+    .btn {
+        color: @dynamic_color;
+        background-color: @dynamic_color_default;
+        margin: 0 3px 3px 0;
+        .o_button_icon, .o_stat_info .o_stat_value {
+            color: @dynamic_color !important;
+        }
+    }
+}
+
+// Nav Tabs
+.nav-tabs > li > a {
+    color: @dynamic_color_default;
+}
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus:hover {
+    background-color: transparent;
+    -webkit-box-shadow: inset 0 -2px 0 @dynamic_color_default;
+    box-shadow: inset 0 -2px 0 @dynamic_color_default;
+    color: @dynamic_color_default;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus {
+    -webkit-box-shadow: inset 0 -3px 0 @dynamic_color_default;
+    box-shadow: inset 0 -3px 0 @dynamic_color_default;
+    color: @dynamic_color_default;
+    border: none;
+}
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus:hover {
+    color: @dynamic_color_default;
+}
+
+// Scrollbar
+::-webkit-scrollbar-track {
+    background-color: #F5F5F5;
+    border-radius: 0px;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: @dynamic_color;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: @dynamic_color_default;
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+    background-color: @dynamic_color_default;
+    border-radius: 0px;
+}
+
+// Many2one Dropdown List
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active {
+    background-color: @dynamic_color_default !important;
+    border-color: @dynamic_color_default !important;
+}
+
+/* // form elements color and background color
+.btn, .btn-large, .btn-floating {
+  color: @dynamic_color;
+  background-color: @dynamic_color_default;
+}
+.btn-floating:hover {
+  background-color: @dynamic_color_default;
+}*/
+.oe_button.oe_highlight, .oe_button.btn-primary {
+    background-color: @dynamic_color_default;
+    border-color: @dynamic_color_default;
+}
+.oe_button.oe_highlight:hover, .oe_button.btn-primary:hover {
+    color: @dynamic_color;
+    background-color: @dynamic_color_default;
+    border-color: @dynamic_color_default;
+}
+.dropdown-content li > a, .dropdown-content li > span {
+  color: @dynamic_color_default;
+}
+input:not([type]):focus:not([readonly]),
+input[type=text]:focus:not([readonly]),
+input[type=password]:focus:not([readonly]),
+input[type=email]:focus:not([readonly]),
+input[type=url]:focus:not([readonly]),
+input[type=time]:focus:not([readonly]),
+input[type=date]:focus:not([readonly]),
+input[type=datetime]:focus:not([readonly]),
+input[type=datetime-local]:focus:not([readonly]),
+input[type=tel]:focus:not([readonly]),
+input[type=number]:focus:not([readonly]),
+input[type=search]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid @dynamic_color_default;
+  box-shadow: 0 1px 0 0 @dynamic_color_default;
+}
+input:not([type]):focus:not([readonly]) + label,
+input[type=text]:focus:not([readonly]) + label,
+input[type=password]:focus:not([readonly]) + label,
+input[type=email]:focus:not([readonly]) + label,
+input[type=url]:focus:not([readonly]) + label,
+input[type=time]:focus:not([readonly]) + label,
+input[type=date]:focus:not([readonly]) + label,
+input[type=datetime]:focus:not([readonly]) + label,
+input[type=datetime-local]:focus:not([readonly]) + label,
+input[type=tel]:focus:not([readonly]) + label,
+input[type=number]:focus:not([readonly]) + label,
+input[type=search]:focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label {
+  color: @dynamic_color_default;
+}
+.input-field .prefix.active {
+  color: @dynamic_color_default;
+}
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:before,
+[type="radio"].with-gap:checked + label:after {
+  border: 2px solid @dynamic_color_default;
+}
+[type="radio"]:checked + label:after,
+[type="radio"].with-gap:checked + label:after {
+  background-color: @dynamic_color_default;
+  z-index: 0;
+}
+[type="checkbox"]:checked + label:before {
+  border-right: 2px solid @dynamic_color_default;
+  border-bottom: 2px solid @dynamic_color_default;
+}
+[type="checkbox"]:indeterminate + label:before {
+  border-right: 2px solid @dynamic_color_default;
+}
+[type="checkbox"].filled-in:checked + label:after {
+  border: 2px solid @dynamic_color_default;
+  background-color: @dynamic_color_default;
+}
+[type="checkbox"].filled-in.tabbed:checked:focus + label:after {
+  background-color: @dynamic_color_default;
+  border-color: @dynamic_color_default;
+}
+.switch label input[type=checkbox]:checked + .lever:after {
+  background-color: @dynamic_color_default;
+}
+input[type=range] + .thumb {
+  background-color: @dynamic_color_default;
+}
+input[type=range] + .thumb .value {
+  color: @dynamic_color_default;
+}
+input[type=range]::-webkit-slider-thumb {
+  background-color: @dynamic_color_default;
+}
+input[type=range]::-moz-range-thumb {
+  background: @dynamic_color_default;
+}
+input[type=range]::-ms-thumb {
+  background: @dynamic_color_default;
+}
+.side-nav a.btn-floating:hover {
+  background-color: @dynamic_color_default;
+}
+.spinner-layer {
+  border-color: @dynamic_color_default;
+}
+.picker__date-display {
+  background-color: @dynamic_color_default;
+}
+.picker__day.picker__day--today {
+  color: @dynamic_color_default;
+}
+.picker__day--selected,
+.picker__day--selected:hover,
+.picker--focused .picker__day--selected {
+  background-color: @dynamic_color_default;
+  color: @dynamic_color;
+}
+.picker__close, .picker__today {
+  color: @dynamic_color_default;
+}
+
+.btn:hover, .btn-large:hover {
+  background-color: @dynamic_color_hover;
+}
+.side-nav a.btn:hover, .side-nav a.btn-large:hover, .side-nav a.btn-large:hover {
+  background-color: @dynamic_color_hover;
+}
+
+// Chat Sidebar
+/*.o_mail_chat .o_mail_chat_sidebar {
+    border-right: 1px solid @dynamic_color_default;
+}*/
+.o_mail_chat .o_mail_chat_sidebar .o_mail_chat_channel_item.o_active {
+    background-color: @dynamic_color_hover;
+    color: @dynamic_color;
+}
+.o_mail_chat .o_mail_chat_sidebar .o_mail_chat_channel_item:hover {
+    background-color: @dynamic_color_hover;
+    color: @dynamic_color;
+}
+.o_mail_chat .o_mail_annoying_notification_bar {
+    background-color: @dynamic_color_default;
+}
+.o_mail_chat .o_mail_chat_content .o_chat_composer {
+    border-top: 1px solid @dynamic_color_default;
+    background-color: @dynamic_color;
+}
+
+
+// Calendar ==========================================
+
+
+.o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-default {  color: @dynamic_color_default;}
+.o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-active {  background-color: @dynamic_color_default; color: #fff;}
+.o_calendar_container .o_calendar_sidebar_container .ui-datepicker table .ui-state-default:hover {  background-color: @dynamic_color_hover; border-color:  @dynamic_color_hover;}
+
+// Customer Kanban View
+.o_kanban_view {
+    .az_box {
+        .card_header {
+            background-color: @dynamic_color_default;
+        }
+        .card_details {
+            a {
+                &:hover {
+                    color: @dynamic_color_default;
+                }
+            }
+            .az_location {
+                a {
+                    &:hover {
+                        color: @dynamic_color_default;
+                    }
+                }
+            }
+            .oe_kanban_partner_links {
+                a {
+                    &:hover {
+                        color: @dynamic_color_default;
+                    }
+                }
+            }
+            .card_contact {
+                li {
+                    a {
+                        &:hover {
+                            color: @dynamic_color_default;
+                            i {
+                                color: @dynamic_color_default;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.navbar-default.light-nav .navbar-nav > .active > a{color: #ffffff;}
+.o_main .btn-default.disabled{color: #ffffff;}
+
+// Theme Background Color ======================
+.oe_logo.left-logo.logo-light-bg,
+.l-theme-bar.app-sidebar-panel,
+.navbar-default.light-nav .navbar-nav > .active > a,
+.progress-bar,
+.btn-primary:focus, 
+.btn-primary.focus,
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:focus,
+.app-drawer-icon-open:hover,
+.btn-primary.disabled, .btn-primary[disabled], fieldset[disabled] .btn-primary, .btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover, .btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus, .btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus, .btn-primary.disabled:active, .btn-primary[disabled]:active, fieldset[disabled] .btn-primary:active, .btn-primary.disabled.active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary.active{
+    background-color: @dynamic_color_default;
+}
+
+
+// Theme Text Color ============================
+ .o_control_panel .breadcrumb > li > a,
+.o_kanban_view.o_kanban_dashboard.o_kanban_ungrouped .o_kanban_card_header .o_kanban_card_header_title .o_primary, .o_kanban_view.o_kanban_dashboard.o_kanban_grouped .o_kanban_card_header .o_kanban_card_header_title .o_primary,
+.o_web_settings_dashboard .o_web_settings_dashboard_col .o_web_settings_dashboard_planner .o_web_settings_dashboard_progress_title{color: @dynamic_color_default;} 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+ -*- coding: utf-8 -*-
+ Odoo, Open Source  Itm Material Theme .
+ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).  
+-->
+<odoo>
+	<template id="assets_backend" name="Open Mobile Assets" inherit_id="web.assets_backend">
+		<xpath expr=".">
+			<link rel="stylesheet" type="text/css" href="/impacto_backend_theme/static/lib/css/drawer.3.2.0.css"
+				/>
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/main.less" />
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/navbar.less" />
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/app_drawer.less" />
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/form_view.less" />
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/variables.less" />
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/drawer.less"/>
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/extra_variables.less"/>
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/bootswatch.less"/>
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/style.less"/>
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/sidebar.less"/>
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/less/themes/dynamic_color.less" type="text/less" />
+			<script type="text/javascript" src="/impacto_backend_theme/static/lib/js/less.js"/>
+				<script type="application/javascript" src="/impacto_backend_theme/static/lib/js/iscroll-probe.5.2.0.js"
+				/>
+			<script type="application/javascript" src="/impacto_backend_theme/static/lib/js/drawer.3.2.0.js"
+				/>
+			<script type="application/javascript" src="/impacto_backend_theme/static/src/js/impacto_backend_theme.js"
+				/>
+			<script type="application/javascript" src="/impacto_backend_theme/static/src/js/sidebar.js"/>
+			<script type="application/javascript" src="/impacto_backend_theme/static/src/js/sidebar-toggle.js"/>
+			<script type="text/javascript" src="/impacto_backend_theme/static/src/js/custom.js"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1" />
+			<link rel="stylesheet" href="/impacto_backend_theme/static/src/css/widget.css"/>
+            <script type="text/javascript" src="/impacto_backend_theme/static/lib/jscolor/jscolor.js"></script>
+            <script type="text/javascript" src="/impacto_backend_theme/static/src/js/widget.js"></script>
+            <script type="text/javascript" src="/impacto_backend_theme/static/src/js/home_action.js"/>	
+		</xpath>
+	</template>
+	<template id="qunit_suite" inherit_id="web.qunit_suite">
+		<xpath expr="//t[@t-set='head']" position="inside">
+			<script type="application/javascript" src="/impacto_backend_theme/static/tests/js/impacto_backend_theme.js"
+			/>
+		</xpath>
+	</template>
+</odoo>

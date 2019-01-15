@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+ -*- coding: utf-8 -*-
+ Odoo, Open Source  Itm Material Theme .
+ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).  
+-->
+
+<templates id="form_view" xml:space="preserve">
+
+    <t t-extend="FormView.buttons">
+        <t t-jquery="button[accesskey='a']" t-operation="attributes">
+            <attribute name="accesskey">e</attribute>
+        </t>
+    </t>
+
+</templates>

@@ -1,0 +1,65 @@
+
+$(document).ready(function() {
+	  $('#customize-leftbar input:radio[name=left-bar-set]').click(function() {
+		   var val = $(this).val();		 
+		   removeclass_extra('customize-leftbar',$('#app-sidebar'));
+		   $('#app-sidebar').addClass(val);
+           $('#customize-leftbar .checked').removeClass('checked');
+	       $(this).parent().addClass('checked');
+
+		   localStorage.setItem("leftbarcolor", val);
+
+	  });
+
+	  $('#customize-topbar input:radio[name=top-bar-set]').click(function() {
+		   var val = $(this).val();		 
+		   removeclass_extra('customize-topbar',$('.navbar-default'));
+		   $('.navbar-default').addClass(val);
+		   $('#customize-topbar .checked').removeClass('checked');
+	       $(this).parent().addClass('checked');
+		   localStorage.setItem("topbarcolor", val);
+	  });
+
+	   $('#customize-logo input:radio[name=logo-bg-set]').click(function() {
+		   var val = $(this).val();		 
+		   removeclass_extra('customize-logo',$('.oe_logo.left-logo'));
+		   $('.oe_logo.left-logo').addClass(val);
+		    $('#customize-logo .checked').removeClass('checked');
+	       $(this).parent().addClass('checked');
+		   localStorage.setItem("logocolor", val);
+	  });
+
+
+	  var lbar = localStorage.getItem("leftbarcolor");
+	  if(lbar){ 
+	  	   removeclass_extra('customize-leftbar',$('#app-sidebar'));
+	  		$('#app-sidebar').addClass(lbar);
+	  		$("#customize-leftbar input:radio[name=left-bar-set][value=" + lbar + "]").attr('checked', 'checked');	
+	  		$("#customize-leftbar input:radio[name=left-bar-set][value=" + lbar + "]").parent().addClass('checked');		
+	  }
+
+	  var tbar = localStorage.getItem("topbarcolor");
+	  if(tbar){ 
+	  	   removeclass_extra('customize-topbar',$('.navbar-default'));
+	  		$('.navbar-default').addClass(tbar);
+	  		$("#customize-leftbar input:radio[name=top-bar-set][value=" + tbar + "]").attr('checked', 'checked');	  		
+	  		$("#customize-leftbar input:radio[name=top-bar-set][value=" + tbar + "]").parent().addClass('checked');
+	  }
+
+	  var logoa = localStorage.getItem("logocolor");
+	  if(logoa){ 
+	  	  removeclass_extra('customize-logo',$('.oe_logo.left-logo'));
+	  		$('.oe_logo.left-logo').addClass(logoa);
+	  		$("#customize-leftbar input:radio[name=logo-bg-set][value=" + logoa + "]").attr('checked', 'checked');	  		
+	  		$("#customize-leftbar input:radio[name=logo-bg-set][value=" + logoa + "]").parent().addClass('checked');	  		
+	  }
+
+	  function removeclass_extra(id,id2){
+	  		$('#' + id + ' input[type=radio]').each(function(){
+	  			  var val = $(this).val();
+			     id2.removeClass(val);
+			});
+	  }
+
+	   
+});

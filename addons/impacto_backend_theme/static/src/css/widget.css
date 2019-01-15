@@ -1,0 +1,36 @@
+/**
+ *  -*- coding: utf-8 -*-
+ *  Odoo, Open Source  Itm Material Theme.
+ *  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).# 
+ * 
+ */
+.openerp .oe_form .oe_form_field_color input {
+    width: 100%;
+}
+
+.openerp .oe_form .oe_form_field_color div {
+    border: 1px solid;
+    display: inline-block;
+    height: 14px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+    width: 40px;
+}
+
+.oe_list_field_color div {
+    border: 1px solid;
+    display: inline-block;
+    height: 14px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+    width: 40px;
+}
+
+.color_box {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 5px;
+}

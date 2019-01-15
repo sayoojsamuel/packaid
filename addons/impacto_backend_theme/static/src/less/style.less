@@ -1,0 +1,586 @@
+/**
+ *  -*- coding: utf-8 -*-
+ *  Odoo, Open Source  Itm Material Theme.
+ *  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).# 
+ * 
+ */
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+body,.o_main{font-family: 'Poppins', sans-serif;}
+
+
+// Put Loading indicator in the right bottom of the screen 
+.o_loading {
+    background-color: darken(@dynamic_color_hover, 13.5%) !important;
+    top: inherit;
+    bottom: 0;
+    right: 0;
+    padding: 5px 5px;
+    border-radius: 0 !important;
+    opacity: 0.8;
+}
+
+// Font
+
+.ui-autocomplete
+{
+	font-family: @font-family-sans-serif;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+// Get rid of purple fontcolor
+
+body a {
+	color: @dynamic_color_hover;
+
+	&:active, &:focus, &:hover {
+		outline: none;
+	}
+}
+
+// Fix color Add file button
+.o_control_panel .o_cp_sidebar .o_hidden_input_file .o_form_binary_form span {
+    color: @gray-dark !important;
+}
+
+//
+
+// Filter search label
+
+.o_searchview {
+    .o_searchview_facet {
+
+         background-color: #ffffff;
+
+        .o_searchview_facet_label {
+            background-color: @dynamic_color_hover;
+        }
+    }
+}
+
+// Align green progress indicator
+#oe_main_menu_navbar .o_planner_systray > .progress {
+    margin-top: 18px !important;
+}
+
+// Buttons
+
+.btn {
+    border: none;
+    font-weight: 500;
+    -webkit-box-shadow: 0 3px 20px 0 rgba(113,106,202,.26);
+    -moz-box-shadow: 0 3px 20px 0 rgba(113,106,202,.26);
+    box-shadow: 0 3px 20px 0 rgba(113,106,202,.26);
+    border-radius: 3px;
+    padding: 10px 20px;
+    border:0;
+    /*color: #212529;*/
+    
+}
+
+//.btn-default {
+//    color: @dynamic_color_hover;
+//    background-color: transparant;
+//}
+
+.btn-primary, .btn-default {
+    text-transform: uppercase;
+}
+
+.btn-default,
+.o_chatter .o_chatter_topbar > .btn {
+   /* color: @dynamic_color_hover;
+    background-color: transparent;*/
+    background: #fff; 
+    color: #212529;
+}
+
+.btn-sm, .btn-group-sm > .btn {   padding: 8px 15px}
+
+.btn + .btn{margin-right: 10px;}
+.btn-group .btn,.drawer-toggle.btn,.o_form_view .o_form_statusbar > .o_statusbar_buttons > .btn,
+.o_form_view .oe_button_box .oe_stat_button,
+.o_field_widget.o_field_many2one .o_external_button,
+.btn-link{
+ -webkit-box-shadow: inherit;
+    -moz-box-shadow: inherit;
+    box-shadow:inherit;
+
+}
+.btn-group .btn{margin-right: 0;}
+ 
+
+
+.btn-primary {
+    color: #ffffff; 
+}
+
+.btn:active, .btn.active {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: @gray !important;
+}
+
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: @gray-lighter !important;
+}
+
+.btn-sm, .btn-group-sm > .btn {   padding: 8px 15px}
+
+.btn + .btn{margin-right: 10px;}
+.btn-group .btn,.drawer-toggle.btn,.o_form_view .o_form_statusbar > .o_statusbar_buttons > .btn,
+.o_form_view .oe_button_box .oe_stat_button,
+.o_field_widget.o_field_many2one .o_external_button,
+.btn-link{
+ -webkit-box-shadow: inherit;
+    -moz-box-shadow: inherit;
+    box-shadow:inherit;
+
+}
+.btn-group .btn{margin-right: 0;}
+
+.o_form_view .oe_button_box .oe_stat_button {
+    border: 1px solid @gray-lighter;
+}
+
+.o_dropdown_toggler_btn, .o_dropdown_toggler_btn:hover, .o_dropdown_toggler_btn:focus, .o_dropdown_toggler_btn:hover, .o_dropdown_toggler_btn:focus, .btn-icon, .o_graph_button {
+    text-transform: none !important;
+    color: @gray-dark !important;
+    background-color: #fff !important;
+    border: none !important;
+}
+
+.oe_highlight {
+    color: #ffffff !important;
+    background-color: @dynamic_color_hover !important;
+}
+
+
+.o_dashboards .o_website_dashboard .o_dashboard_common .o_inner_box.o_primary{
+    background-color: @dynamic_color_hover !important;
+}
+
+//.btn-sm, .btn-group-sm > .btn {
+//    font-size: 13px;
+//}
+
+.o_external_button {
+    color: @dynamic_color_hover !important;
+    background: #ffffff;
+}
+
+.o_button_icon {
+    color: @dynamic_color_hover !important;
+}
+
+// Forms
+
+.o_form_view {
+
+    .o_form_sheet_bg {
+        background: none !important;
+       /* background-color: #F9F9F9 !important;*/
+        padding: 0px;
+        .o_form_sheet {
+           /* border: 1px solid #d9d7d7;
+            box-shadow: 0 5px 20px -15px black;*/
+            max-width: 90%;
+        }
+    }
+
+    .o_form_statusbar {
+        //margin: -16px;
+  
+        .o_statusbar_status {
+            > .o_arrow_button {
+                background: #ffffff;
+            }
+        }
+    }
+}
+
+// Controlpanel
+
+.o_control_panel {
+    background-color: #ffffff;
+    .breadcrumb {
+        padding:0 ;
+    }
+}
+
+.breadcrumb {
+    background-color: inherit;
+}
+
+// Listview =======================================
+
+.o_list_view.table {
+    border: none;
+}
+.o_list_view.table thead, .o_list_view.table tfoot, .o_list_view.table td,.o_list_view.table th {
+    border: none;
+}
+ 
+.o_list_view.table thead {
+    background-color: #e2e2e0;
+}
+ 
+.o_list_view.table thead > tr > th.o_column_sortable:hover {
+    background-color: #D6D6D3;
+}
+ 
+.o_list_view.table tbody tr.o_group_header {
+    background-color: #dfdfdf;
+    background-image: none;
+    border-top: 1px solid #e2e2e0;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #eef0f0;
+}
+
+.o_list_view tfoot {
+   
+    color: #ffffff;
+    cursor: default;
+    font-weight: normal;
+}
+
+// Checkbox ==========================================
+div.o_checkbox {
+    display: inline-block;
+    position: relative;
+    vertical-align: sub;
+}
+ 
+div.o_checkbox > input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    cursor: pointer;
+}
+ 
+div.o_checkbox > input + span {
+    display: block;
+	width: 15px;
+    height: 15px;
+    border: 1px solid #8f8f8f;
+    background-color: white;
+}
+ 
+div.o_checkbox > input:checked + span {
+    background-repeat: no-repeat;
+    background-image: url(/Impacto_backend_theme/static/src/img/checked.svg);
+    background-position: center center;
+}
+ 
+div.o_checkbox > input:disabled + span {
+    opacity: 0.7;
+    border: 1px solid #e2e2e0;
+}
+ 
+ div.o_checkbox > input:focus + span {
+    outline: 1px solid @dynamic_color_hover;
+}
+
+// Input field
+
+input[type="text"], input[type="password"], input[type="number"],
+textarea, select, .o_form_view.o_form_editable .o_form_field_many2manytags,
+.o_searchview
+{
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.o_web_client input:focus, .o_web_client textarea:focus, .o_web_client select:focus {
+    outline: none;
+	border-bottom: 2px solid @brand-info;
+}
+
+.o_input {
+    border: 1px solid #ccc;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: @gray;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: #E5E5E5;
+    color: darken(@navbar-default-bg, 15%);
+}
+.dropdown-menu{
+    box-shadow: 0 0 15px 1px rgba(69,65,78,.2);
+    border: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    min-width: 230px;
+}
+
+// Sidechatter like EE
+
+@o-chatter-width: 510px;
+
+@media screen and (min-width: 1600px) {
+
+    .o_form_sheet_bg {
+        width: ~"calc(100% - 510px)";
+        float: left;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    .o_form_view .o_form_sheet_bg .o_form_sheet {
+        max-width: 97%;
+    }
+    .o_form_view .o_form_sheet_bg {
+        border-bottom: none;
+    }
+    
+    .oe_chatter {
+        width: @o-chatter-width;
+        background-color: none;
+        float:right;
+        border-left: 1px solid @gray-lighter;
+        overflow: auto;
+        padding: 0 !important;
+    }
+    
+    .o_chatter {
+        height: 100vh;
+    }
+    
+    .o_chatter_topbar {
+        margin: 0 !important;   
+    }
+    
+    .o_thread_date.btn {
+        color: inherit;
+    }
+    
+    // Fix Modal Dialog size = Scheduled Action button
+    .modal .modal-dialog .o_form_view .o_form_sheet_bg, .modal .modal-dialog .o_form_view .o_form_sheet {
+        width: 100%;
+        height: 100%;
+    }
+
+}
+
+
+
+// navbar ==========================================
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  @media (max-width : @screen-xs-max) {
+    color : @dynamic_color_hover;
+    text-align: center;
+  }
+}
+
+
+ .o_kanban_view{background-color: #f2f3f8; -webkit-box-flex: 1; -ms-flex: 1 0 auto; -moz-flex: 1 0 auto; -webkit-flex: 1 0 auto; flex: 1 0 auto; display: -ms-flexbox; display: -moz-box; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-align-content: flex-start; align-content: flex-start; -webkit-align-items: stretch; align-items: stretch;}
+ .o_kanban_view .o_kanban_record{background-color: #ffffff; color: #191919; margin: 10px; border: none; border-radius: 4px; padding: 16px 16px; position: relative; word-wrap: break-word; box-shadow: 0px 1px 15px rgba(0,0,0,0.3) !important;   box-shadow: 0 10px 60px 0 rgba(29,29,31,.09) !important; margin: 6px; transition: all 0.3s cubic-bezier(.21, .6, .35, 1);}
+ .o_kanban_view .o_kanban_record:hover {transform: translateY(-2px);  box-shadow: 0 30px 65px rgba(0,0,0,0.15) !important; }
+
+.o_form_view .o_form_sheet_bg .o_form_sheet,
+.o_web_settings_dashboard .o_web_settings_dashboard_col > div{box-shadow: 0 10px 60px 0 rgba(29,29,31,.09); border: none; border-radius: 4px; }
+
+// Discuss ==========================================
+
+.o_mail_chat .o_mail_chat_sidebar{ background-color: #f4f5f8; color: @gray-dark;}
+.o_mail_chat .o_mail_chat_sidebar .o_mail_sidebar_title h4{
+    color: @gray-darker;
+}
+
+// Calendar ==========================================
+.o_calendar_container .o_calendar_sidebar_container .o_calendar_sidebar{ width: 300px;}
+.ui-datepicker table {  font-size: 1.1em;}
+
+
+// navbar ==========================================
+.o_control_panel{background-color: #f2f3f8; border: none; padding-top: 35px;}
+
+.o_web_client {background-color: #f2f3f8;}
+.app-sidebar-panel.l-light-bar{background-color:#fff;}
+
+// Navbar Customize ==========================================
+.o_web_client .navbar li > a{font-size: 14px;}
+.navbar-default{min-height: 70px;}
+
+.navbar-default.light-nav .navbar-nav > li > a{color: @gray-dark;}
+
+
+// Content Bg Customize ==========================================
+
+
+/*===================================================*/
+/* New CSS */
+/*===================================================*/
+header #odooAppDrawer{display:none;}
+.main-nav .app-drawer-icon-open{display:block !important;}
+
+
+// Top Main Panel =========================
+.navbar-default.light-nav .app-drawer-icon-open, 
+.navbar-default.light-nav .app-drawer-icon-close{color: #666666;}
+.navbar-default.light-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li.app-name > .oe_menu_text{color: #666666;}
+.navbar-default.light-nav .app-drawer-icon-open:hover{color: #ffffff;}
+header > .main-nav > .container-fluid > .navbar-header{margin-right: 15px;}
+
+// Left Side Panel ========================
+.l-dark-bar.app-sidebar-panel{background-color: @gray-darker;}
+.l-dark-bar.app-sidebar-panel .title{color: #868aa8;}
+
+header .oe_logo, .app-sidebar-panel{-webkit-transition:all 0.3s ease-in-out 0s; -moz-transition:all 0.3s ease-in-out 0s;
+transition:all 0.3s ease-in-out 0s;}
+
+.l-theme-bar.app-sidebar-panel .title{color: #e2e2e2;}
+
+// Logo Area ==============================
+.oe_logo.left-logo.logo-dark-bg{background-color: @gray-darker;}
+.oe_logo.left-logo.logo-light-bg{background-color: @dynamic_color_default;}
+
+// Form View =========================
+.o_form_view .o_form_sheet_bg,.o_form_view{background: none}
+.o_form_view .o_form_statusbar{background: none; border: none}
+
+// Tabs View =========================
+.nav-tabs > li > a{font-size: 15px;}
+
+// App ====================================
+.o_kanban_view .o_kanban_record{ margin: 6px !important; padding: 12px !important;}
+.o_kanban_view .o_kanban_record .oe_module_desc h4{font-size: 14px;}
+.o_kanban_view .o_kanban_record .btn-primary{ color: #ffffff; bottom:12px; right: 12px;}
+.o_kanban_view .o_kanban_record .btn-default.disabled{color: #ffffff; bottom:12px; right: 12px;}
+.o_kanban_view .o_kanban_record .oe_module_icon + .oe_module_desc {padding-left: 90px;}
+
+.o_control_panel .o_cp_switch_buttons .btn:active,
+.o_control_panel .o_cp_switch_buttons .btn.active{background: #555555 !important; color: #ffffff !important;}
+
+// App - Dark ==============================
+.body-dark-bg .o_control_panel,
+.body-dark-bg.o_web_client,
+.body-dark-bg .o_web_settings_dashboard,
+.body-dark-bg .o_dashboards .o_website_dashboard{background:  @gray-darker;}
+
+.body-dark-bg .o_kanban_view, .body-dark-bg .o_kanban_view .o_kanban_record{background: @gray-darker;}
+.body-dark-bg .o_kanban_view .o_kanban_record{border: 1px solid rgba(255, 255, 255, 0.10); color: #fff}
+.body-dark-bg .o_kanban_view .o_kanban_record .oe_module_desc h4{color: #ffffff;}
+.body-dark-bg .o_kanban_view .o_kanban_record .btn-primary{background: #252525; color: #eeeeee;}
+
+//  Dark - Calendar ==========================================
+.body-dark-bg .o_calendar_container .o_calendar_view .o_calendar_widget,
+.body-dark-bg .o_calendar_container .o_calendar_sidebar_container .o_calendar_sidebar{background:  @gray-darker; color: #fff}
+.body-dark-bg .o_calendar_container .o_calendar_view .o_calendar_widget .fc-week-number,.body-dark-bg .o_calendar_container .o_calendar_view .o_calendar_widget .fc-widget-header{background: none}
+.body-dark-bg .ui-widget-content,
+.body-dark-bg .o_calendar_container .o_calendar_sidebar_container .ui-datepicker table td{background: none; color: #fff}
+
+.body-dark-bg .o_calendar_container .o_calendar_sidebar_container .ui-datepicker .ui-widget-header .ui-datepicker-prev,
+.body-dark-bg .o_calendar_container .o_calendar_sidebar_container .ui-datepicker .ui-widget-header .ui-datepicker-next{
+    color: #fff;
+}
+.body-dark-bg .o_calendar_container .o_calendar_sidebar_container .o_calendar_filter{border: none;}
+
+// App List Light ========
+.o_view_manager_content .table-responsive{margin: 25px; background: #ffffff;  padding: 20px;  border-radius: 5px;}
+.o_view_manager_content .table-responsive table tr td{padding: 10px 8px;}
+
+// App List Dark =========
+.body-dark-bg .o_view_manager_content .table-responsive{background: @gray-darker;}
+.body-dark-bg .o_view_manager_content .o_list_view{background: transparent;}
+.body-dark-bg .o_view_manager_content .table-striped > tbody > tr:nth-of-type(2n+1){background: #303240;}
+.body-dark-bg .o_view_manager_content .table-responsive table tr{color: #e8e8e8;}
+body.body-dark-bg .text-danger,
+.body-dark-bg .o_view_manager_content .table-responsive table .text-danger{color: #e42929;}
+
+.body-dark-bg .o_list_view.table thead{background-color: #424242 }
+
+// Dashboard =============================
+.body-dark-bg .o_web_settings_dashboard .o_web_settings_dashboard_col > div{background: @gray-darker; color: #ffffff;}
+.body-dark-bg .o_dashboards .o_website_dashboard div.o_box{background: @gray-darker;}
+body .o_kanban_view.o_kanban_dashboard.o_salesteam_kanban .o_sales_dashboard{padding: 20px 10px;}
+
+.header .oe_logo{ background: transparent url('/float') no-repeat scroll center center / cover;}
+body .o_main .o_searchview .o_searchview_input {height: 24px; margin: 0px; padding: 0 10px;}
+
+body .o_form_view > header{border-bottom: none; background-color: inherit; background-image: inherit; margin-bottom: 20px; padding: 0 56px; margin-top: 10px;}
+
+.oe_highlight {color: #ffffff !important;  background-color: #323232 !important;}
+
+// Backend Costomizer
+#backend-customizer {    position: absolute;    width: 200px;    min-height: 200px;    background: #fff;    right: 0;    padding: 30px;    border-radius: 4px;    box-shadow: 0 10px 60px 0 rgba(29,29,31,.09);}
+#backend-customizer label {   display: inline-block;    text-align: center;}
+#backend-customizer label > div { position: relative; padding: 12px;   line-height: 30px;   font-size: 0.9em;   margin: 2px 4px;    background: #2c2e3e;    border-radius: 50%;}
+#backend-customizer label input {  display: none;}
+#backend-customizer label > div.light{background: #ccc}
+#backend-customizer h4{color: #222; text-transform: uppercase; font-size: 14px; margin-top: 10px;  font-weight: 800;}
+#backend-customizer label.checked > div::before { position: absolute; top: 7px; display: block; border-radius: 50%; width: 1rem;  height: 1rem; content: '';  left: 7px; background: #fff;}
+
+header .oe_logo .float-logo{display: none;}
+.drawer-open header .oe_logo .main-logo{display: none;}
+.drawer-open header .oe_logo .float-logo{    display: inline-block;  height: 50px;   margin-top: 10px;}
+
+
+// Responsive CSS ========================
+@media (min-width: 768px){
+    .drawer-open header .oe_logo,
+    .drawer-open .app-sidebar-panel{-webkit-flex:0 0 70px; -moz-flex:0 0 70px; -ms-flex:0 0 70px; flex:0 0 70px;}
+    .drawer-open .app-sidebar-panel .app-sidebar-menu .nav-item .title{display: none;}
+}
+
+@media screen and (max-width: 992px) {
+    body .o_kanban_view.o_kanban_ungrouped .o_kanban_record {-ms-flex: 1 1 298px; -moz-flex: 1 1 298px; -webkit-box-flex: 1;
+        -webkit-flex: 1 1 298px; flex: 1 1 298px;}
+}
+
+@media (max-width: 767px){
+    body header[role="banner"]{display: inline-block; flex-direction: row; width: 100%;}
+    body header .oe_logo{width:100%; left:0; display: none; flex: none;}
+    body .navbar.navbar-default.main-nav{min-height: 50px;}
+
+    body header > .main-nav > .container-fluid > .navbar-header > .drawer-toggle div.fa, header > .main-nav > .container-fluid > .navbar-header .navbar-toggle .fa-lg app-drawer-icon-open{padding: 19px 14px 17px; margin-left: 5px;}
+
+    body header > .main-nav .navbar-right {right: 60px;}
+
+    body header .navbar-default .navbar-toggle:focus{background-color:inherit}
+    body header > .main-nav > .container-fluid > .navbar-header .navbar-toggle > i.fa{padding: 18px 14px 18px; color: #ffffff;
+    font-size: 18px;}
+    body header > .main-nav.dark-nav > .container-fluid > .navbar-header .navbar-toggle > i.fa{color: #ffffff;}
+    body header > .main-nav.light-nav > .container-fluid > .navbar-header .navbar-toggle > i.fa{color: #666666;}
+
+    // Left Menu
+    body .app-sidebar-panel{display: block; -webkit-flex:0 0 0px; -moz-flex:0 0 0px; -ms-flex:0 0 0px; flex:0 0 0px;}
+    body .app-sidebar-panel .app-sidebar.collapse{display: block;}
+
+    body.drawer-close .app-sidebar-panels{-webkit-flex:0 0 0px; -moz-flex:0 0 0px; -ms-flex:0 0 0px; flex:0 0 0px;}
+    body.drawer-open .app-sidebar-panel{-webkit-flex:0 0 250px; -moz-flex:0 0 250px; -ms-flex:0 0 250px; flex:0 0 250px;}
+
+    // Top Menu
+    body header > .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu{position: relative; z-index: 9; background: #ffffff; padding: 10px 20px;}
+    body header > .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li{padding: 5px 10px !important;}
+    body header > .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li > .oe_menu_text{color: #323232;}
+    body header > .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li > a{height: auto;     padding: 5px 10px !important;  line-height: 22px !important; color: #323232;}
+    body header > .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li.app-name > .oe_menu_text{color: #323232;}
+    body header > .main-nav > .container-fluid .o_sub_menu > .o_sub_menu_content > .oe_secondary_menu > li.active > a{color: #ffffff;}
+    body header > .main-nav > .navbar-right.o_menu_systray > ul > li > a{margin: 0; padding: 16px 8px; height: auto;}
+    body header > .main-nav .navbar-right .navbar-nav .open .dropdown-menu{top: 120px;}
+    body .navbar-default .navbar-nav .open .dropdown-menu > li > a{color: #323232;}
+
+    body .o_kanban_view.o_kanban_ungrouped .o_kanban_record {-ms-flex: 1 0 48%; -moz-flex: 1 0 48%; -webkit-box-flex: 1; -webkit-flex: 1 0 48%; flex: 1 0 48%;}
+    .o_web_client > .o_main > .o_main_content {overflow: auto; height: 100%;}
+}

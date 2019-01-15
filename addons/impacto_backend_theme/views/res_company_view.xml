@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+ -*- coding: utf-8 -*-
+ Odoo, Open Source  Itm Material Theme .
+ License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).  
+-->
+<odoo>
+	<record id="color_res_company_form_inherit" model="ir.ui.view">
+		<field name="name">res.company.form</field>
+		<field name="model">res.company</field>
+		<field name="inherit_id" ref="base.view_company_form" />
+		<field name="arch" type="xml">
+			<xpath expr="//notebook" position="inside">
+                <page name="background" string="Apps Dashboard">
+                    <group name="dashboard_settings">
+                        <field name="dashboard_background" widget="image" class="oe_avatar"/>
+                    </group>
+                    <group><field name="color_background" widget="color" groups="base.group_system"/></group>
+                </page>
+            </xpath>
+		</field>
+	</record>
+</odoo>

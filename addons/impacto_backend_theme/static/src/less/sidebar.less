@@ -1,0 +1,99 @@
+/**
+ *  -*- coding: utf-8 -*-
+ *  Odoo, Open Source  Itm Material Theme.
+ *  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).# 
+ * 
+ */
+
+
+/* App Sidebar Panel */
+
+@odoo-sidebar-width: 250px;
+
+.app-sidebar-panel {
+    .o-flex(0, 0, @odoo-sidebar-width);
+    background-color: @gray-base;
+    height: 100% !important;
+    padding-top: 20px;
+    overflow-y: auto;
+    @media (max-width: @screen-sm-min) {
+      display: none;
+    }
+}
+
+
+
+
+//.app-sidebar-panel:hover {
+//    .o-flex(0, 0, @odoo-sidebar-width);
+//}
+
+.app-sidebar {
+    white-space: nowrap;
+    padding: 0;
+    .app-sidebar-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	>li {
+	    display: block;
+	    margin: 0;
+	    padding: 0;
+	    border: 0px;
+	    >a {
+            display: block;
+            position: relative;
+            margin: 0;
+            border: 0px;
+            padding: 8px 15px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 300;
+            color: @gray;
+            overflow: hidden;
+            text-overflow: ellipsis;
+	    }
+	}
+        > li:hover > a{
+    	    background: darken(@odoo-brand-primary, 15%);
+    	    color: #fff;
+        }
+    }
+}
+
+.app-sidebar-menuitem {
+    width: 35px;
+    height: 35px;
+    margin-right: 8px;
+    filter: grayscale(100%);
+}
+
+.toggle-sidebar {
+    margin-left: 0px - @odoo-sidebar-width;
+}
+
+.o_web_client .navbar{
+     -ms-flex: 1 1 auto;
+    -moz-flex: 1 1 auto;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+
+header .oe_logo{
+     .o-flex(0, 0, @odoo-sidebar-width);
+     height: 70px;
+     background: #fff;
+     text-align: center;
+     position: relative;
+     z-index: 999;
+}
+
+header .oe_logo img{height: 100%}
+
+header[role="banner"]{
+     display: flex;
+    flex-direction: row;
+}
+

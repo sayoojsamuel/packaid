@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="digits_configuration_form_view">
+            <field name="name">digits.configuration.form</field>
+            <field name="model">digits.configuration</field>
+            <field name="arch" type="xml">
+                <form string="Configuration" create="false" >
+                    <sheet>
+                        <group>
+                            <field name="digits_consumer_key"/>
+                         	 <button name="get_digits_consumer_key" string="Request Digits Consumer Key" type="object" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+          </record>
+
+        <record id="digits_configuration_action" model="ir.actions.server">
+            <field name="name">Configuration</field>
+            <field name="condition">True</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_digits_configuration" /> 
+            <field name="code">
+configIdObj = env['digits.configuration'].search([]) 
+if configIdObj:
+	action = {
+               	 		"type": "ir.actions.act_window",
+             	   		"view_mode": "form",
+             	   		"res_model": "digits.configuration",
+             	   		"res_id": configIdObj[0].id,
+           		 	}
+else:
+					action = {
+               	 		"type": "ir.actions.act_window",
+             	   		"view_mode": "form",
+             	   		"res_model": "digits.configuration",
+           		 }
+           		 		
+            </field>
+        </record> 
+
+		<menuitem name="2FA Configuration" id="digits_configuration" parent="allip_base.allip_main_menu" action="digits_configuration_action"/>
+        
+     
+    </data>
+</odoo>
